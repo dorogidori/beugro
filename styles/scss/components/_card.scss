@@ -1,0 +1,41 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.card {
+    background-color: rgba(variables.$color-lightblue, 0.3);
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: calc(variables.$baseunit * 2);
+    @include mixins.boxShadow;
+    margin: 0 0 calc(variables.$baseunit * 2) 0;
+}
+
+.cardcontent {
+    padding: calc(variables.$baseunit * 2);
+}
+
+.cardname {
+    @include mixins.text_with_shadow;
+    text-align: center;
+    margin: 0;
+}
+
+button {
+    border: none;
+    font-size: variables.$fontsize-small;
+    text-align: center;
+}
+
+.cardbutton {
+    background-color: variables.$color-red;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: calc(variables.$fontsize-small * 0.5) variables.$fontsize-small;
+    border-radius: variables.$baseunit;
+
+    &:hover {
+        color: variables.$color-blue;
+    }
+}

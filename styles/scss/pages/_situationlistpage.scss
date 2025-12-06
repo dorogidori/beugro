@@ -1,0 +1,74 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.situationlistitem {
+    padding: variables.$baseunit variables.$baseunit calc(variables.$baseunit * 1.5) calc(variables.$baseunit * 1.5);
+    text-align: left;
+}
+
+.situationlistitem-topdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.situationlistitem-variationlabel {
+    font-weight: 200;
+    width: fit-content;
+    background-color: rgba(variables.$color-red, 0.5);
+    padding: 0 calc(variables.$fontsize-small * 0.5);
+}
+
+.situationlistitem-description {
+    font-weight: 600;
+    margin-top: calc(variables.$baseunit * 0.5);
+    margin-right: calc(variables.$baseunit * 0.5);
+}
+
+.situationlistitem-variations {
+    display: flex;
+    align-items: center;
+    margin-bottom: calc(variables.$fontsize-small * 0.5);
+
+    .situationlistitem-variations-text {
+        font-weight: 200;
+        margin-right: calc(variables.$baseunit * 0.5);
+    }
+
+    .situationlistitem-variations-button {
+        background-color: variables.$color-lightblue;
+        color: variables.$color-blue;
+        font-weight: 600;
+        padding: calc(variables.$fontsize-small * 0.2) calc(variables.$fontsize-small * 0.5);
+        border-radius: calc(variables.$fontsize-small * 0.5);
+        margin-right: calc(variables.$fontsize-small * 0.5);
+
+        &:hover {
+            background-color: variables.$color-red;
+            color: white;
+        }
+    }
+}
+
+.situationlistitem-keywords {
+    display: flex;
+    align-items: center;
+
+    .situationlistitem-keywords-label {
+        background-color: rgba(variables.$color-lightblue, 0.4);
+        color: white;
+        font-size: variables.$fontsize-small;
+        font-weight: 100;
+        padding: calc(variables.$fontsize-small * 0.05) calc(variables.$fontsize-small * 0.2);
+        margin-right: calc(variables.$fontsize-small * 0.5);
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .situationlistitem-bottomdiv {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: calc(variables.$baseunit * 0.5);
+    }
+}

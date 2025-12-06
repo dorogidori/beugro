@@ -1,0 +1,64 @@
+{
+    "sentences": [
+
+    ],
+    "emotions": [
+
+    ],
+    "events": {
+        "actions": [
+            {
+                "before": "",
+                "random": [
+                    "Azonnal hasra fekszik és úszótempókat végez",
+                    "Bokacsapkodós népitáncba kezd",
+                    "\"Gyere, játszuk le!\" felkiáltással kötekedik",
+                    "Megnyalja az ujját és végigsimítja a szemöldökét",
+                    "Hányingere lesz",
+                    "Koccintani akar",
+                    "Pirospacsizni akar",
+                    "Felkér valakit táncolni",
+                    "Meghatódik"
+                ],
+                "after": ", ha "
+            },
+            {
+                "before": "Elkezd ",
+                "random": ["énekelni", "számolni", "imádkozni", "egy mondókát mondani", "verset szavalni", "vetkőzni", "látványosan fázni", "idegen nyelven beszélni", "tüsszögni", "ásítani"],
+                "after": " , ha "
+            },
+            {
+                "before": "Azt kiabálja, hogy \"",
+                "random": ["Csubakka!", "Heuréka!", "Jézusom!", "Ezt a szutykot!", "Basszuskulcs!", "Egészségedre!", "Nem hiszem el!", "Feladom!", "Ez drága lesz!", "Édesem!"],
+                "after": "\", ha "
+            },
+            {
+                "before": "",
+                "random": ["Városneveket", "Országokat", "Állatokat", "Színeket", "Híres embereket"],
+                "after": " kezd sorolni, ha "
+            }
+        ],
+        "triggers": [
+            {
+                "before": "",
+                "random": ["B", "F", "G", "K", "L", "M", "N", "P", "R", "S", "T", "V", "Z"],
+                "after": " betűvel kezdődő szót hall."
+            },
+            {
+                "before": "egy ",
+                "random": ["színt", "számot", "várost", "országot", "márkanevet", "keresztnevet", "gyümölcsöt", "zöldséget", "állatot", "ételt"],
+                "after": " hall."
+            },
+            {
+                "before": "valaki ",
+                "random": ["tapsol", "feláll", "leül", "suttog", "elkezd számolni", "keresztbe teszi a lábát", "összekulcsolja a kezét", "összeérinti a két kezét", "megérint valakit", "csettint", "hozzáér", "kérdést tesz fel valakinek", "őt kérdezi"],
+                "after": "."
+            },
+            {
+                "before": "valaki kimondja a(z) \"",
+                "random": ["meccs", "óra", "asztal", "_special"],
+                "after": "\" szót."
+            }            
+        ]
+    }
+}

@@ -1,0 +1,269 @@
+.card {
+  background-color: rgba(110, 112, 198, 0.3);
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 4vh;
+  box-shadow: 0vh 1vh 8vh 0.6vh #202270;
+  margin: 0 0 4vh 0;
+}
+
+.cardcontent {
+  padding: 4vh;
+}
+
+.cardname {
+  color: white;
+  font-size: 4vh;
+  font-weight: 500;
+  text-shadow: 0.24vh 0.24vh 0.4vh #e2014a, -0.24vh 0.24vh 0.4vh #e2014a, 0.24vh -0.24vh 0.4vh #e2014a, -0.24vh -0.24vh 0.4vh #e2014a;
+  text-align: center;
+  margin: 0;
+}
+
+button {
+  border: none;
+  font-size: 1.4vh;
+  text-align: center;
+}
+
+.cardbutton {
+  background-color: #e2014a;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.7vh 1.4vh;
+  border-radius: 2vh;
+}
+.cardbutton:hover {
+  color: #12144f;
+}
+
+#gamecardssection {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gamecard {
+  height: 30vh;
+}
+.gamecard .gamecard-content {
+  text-align: left;
+}
+.gamecard .gamecard-description-container {
+  display: flex;
+  align-items: center;
+  height: 18vh;
+}
+
+.randomcard {
+  background-color: rgba(110, 112, 198, 0.6);
+}
+.randomcard h2 {
+  text-shadow: none;
+}
+
+#dialog {
+  position: fixed;
+  top: 30%;
+  width: 36vh;
+  height: 20vh;
+  background-color: #12144f;
+  margin: auto;
+}
+#dialog #dialogbuttonsdiv {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3vh;
+}
+
+@media screen and (min-width: 600px) {
+  .gamecard {
+    width: 41%;
+    margin: 0 4vh 4vh 4vh;
+  }
+}
+.situationlistitem {
+  padding: 2vh 2vh 3vh 3vh;
+  text-align: left;
+}
+
+.situationlistitem-topdiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.situationlistitem-variationlabel {
+  font-weight: 200;
+  width: fit-content;
+  background-color: rgba(226, 1, 74, 0.5);
+  padding: 0 0.7vh;
+}
+
+.situationlistitem-description {
+  font-weight: 600;
+  margin-top: 1vh;
+  margin-right: 1vh;
+}
+
+.situationlistitem-variations {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7vh;
+}
+.situationlistitem-variations .situationlistitem-variations-text {
+  font-weight: 200;
+  margin-right: 1vh;
+}
+.situationlistitem-variations .situationlistitem-variations-button {
+  background-color: #6e70c6;
+  color: #12144f;
+  font-weight: 600;
+  padding: 0.28vh 0.7vh;
+  border-radius: 0.7vh;
+  margin-right: 0.7vh;
+}
+.situationlistitem-variations .situationlistitem-variations-button:hover {
+  background-color: #e2014a;
+  color: white;
+}
+
+.situationlistitem-keywords {
+  display: flex;
+  align-items: center;
+}
+.situationlistitem-keywords .situationlistitem-keywords-label {
+  background-color: rgba(110, 112, 198, 0.4);
+  color: white;
+  font-size: 1.4vh;
+  font-weight: 100;
+  padding: 0.07vh 0.28vh;
+  margin-right: 0.7vh;
+}
+
+@media screen and (min-width: 600px) {
+  .situationlistitem-bottomdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 1vh;
+  }
+}
+html {
+  background-color: #12144f;
+  color: white;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-size: 2vh;
+}
+
+main {
+  margin: 4vh 2vh;
+  position: relative;
+  z-index: 1;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+section {
+  margin: 2vh;
+}
+
+.hideelement {
+  visibility: hidden;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #12144f;
+  padding: 2vh;
+  box-shadow: 0vh 1vh 8vh 0.6vh #202270;
+  z-index: 10;
+}
+header #headertop {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2vh;
+  position: relative;
+}
+header #headertop #logo {
+  margin: 0;
+  width: 100%;
+}
+header #headertop #logo h1 {
+  margin: 0;
+  color: white;
+  font-size: 6vh;
+  font-weight: 500;
+  text-shadow: 0.36vh 0.36vh 0.6vh #e2014a, -0.36vh 0.36vh 0.6vh #e2014a, 0.36vh -0.36vh 0.6vh #e2014a, -0.36vh -0.36vh 0.6vh #e2014a;
+  text-align: center;
+  cursor: pointer;
+}
+header #headertop #icondiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 2vh;
+}
+header #headertop #icondiv .icon {
+  height: 3.4vh;
+  cursor: pointer;
+}
+header #headerbottom {
+  display: flex;
+  align-items: last baseline;
+  justify-content: space-between;
+  margin: 0 2vh;
+}
+header #headerbottom a {
+  color: white;
+  font-size: 2.4vh;
+  font-weight: 500;
+}
+header #headerbottom a:hover:not([id=current]) {
+  color: white;
+  font-size: 2.4vh;
+  font-weight: 500;
+  text-shadow: 0.144vh 0.144vh 0.24vh #e2014a, -0.144vh 0.144vh 0.24vh #e2014a, 0.144vh -0.144vh 0.24vh #e2014a, -0.144vh -0.144vh 0.24vh #e2014a;
+}
+header #headerbottom a.current {
+  text-decoration: underline;
+  cursor: default;
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    padding: 2vh 2vh 4vh 2vh;
+  }
+  header #headertop #icondiv {
+    flex-direction: row;
+    margin-right: 2vh;
+  }
+  header #headertop #icondiv .icon {
+    height: 4.4vh;
+    margin-left: 2vh;
+  }
+  header #headerbottom {
+    max-width: 35%;
+    margin: 0 auto;
+  }
+  main {
+    max-width: 60%;
+    margin: 4vh auto;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

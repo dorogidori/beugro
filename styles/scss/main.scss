@@ -1,0 +1,128 @@
+@use './abstracts/variables';
+@use './abstracts/mixins';
+@use './components/card';
+@use './pages/gamepage';
+@use './pages/situationlistpage';
+
+html {
+    background-color: variables.$color-blue;
+    color: white;
+    font-family: variables.$font-outfit;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    font-size: variables.$baseunit;
+}
+
+main {
+    margin: calc(variables.$baseunit * 2) variables.$baseunit;
+    position: relative;
+    z-index: 1;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+section {
+    margin: variables.$baseunit;
+}
+
+.hideelement {
+    visibility: hidden;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: variables.$color-blue;
+    padding: variables.$baseunit;
+    @include mixins.boxShadow;
+    z-index: 10;
+
+    #headertop {
+        display: flex;
+        align-items: center;
+        margin-bottom: variables.$baseunit;
+        position: relative;
+
+        #logo {
+            margin: 0;
+            width: 100%;
+            h1 {
+                margin: 0;
+                @include mixins.text_with_shadow($size: variables.$fontsize-title);
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+
+        #icondiv {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: variables.$baseunit;
+            .icon {
+                height: calc(variables.$baseunit * 1.7);
+                cursor: pointer;
+            }
+        }
+        
+    }
+
+    #headerbottom {
+        display: flex;
+        align-items: last baseline;
+        justify-content: space-between;
+        margin: 0 variables.$baseunit;
+
+        a {
+            color: white;
+            font-size: variables.$fontsize-large;
+            font-weight: 500;
+
+            &:hover:not([id="current"]) {
+                @include mixins.text_with_shadow($size: variables.$fontsize-large);
+            }
+
+            &.current {
+                text-decoration: underline;
+                cursor: default;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    header {
+        padding: variables.$baseunit variables.$baseunit calc(variables.$baseunit * 2) variables.$baseunit;
+
+        #headertop {
+            #icondiv {
+            flex-direction: row;
+            margin-right: variables.$baseunit;
+            .icon {
+                height: calc(variables.$baseunit * 2.2);
+                margin-left: variables.$baseunit;
+            }
+        }
+        }
+        
+        #headerbottom {
+            max-width: 35%;
+            margin: 0 auto;
+        }
+    }
+
+    main {
+        max-width: 60%;
+        margin: calc(variables.$baseunit * 2) auto;
+    }
+}

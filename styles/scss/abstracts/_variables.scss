@@ -1,0 +1,27 @@
+//#region ---------- COLORS ----------
+$color-blue: #12144f;
+$color-red: #e2014a;
+$color-lightblue: #6e70c6;
+$color-darkblue: #020434;
+$shadow-color: #202270;
+
+//#endregion COLORS
+
+//#region ---------- FONTS ----------
+$font-outfit: "Outfit", sans-serif;
+$font-montserrat: 'Montserrat', sans-serif;
+
+//#endregion FONTS
+
+//#region ---------- SIZES ----------
+$baseunit: 2vh;
+
+// font sizes
+$fontsize-small:  calc($baseunit * 0.7);
+$fontsize-normal: $baseunit;
+$fontsize-large:  calc($baseunit * 1.2);
+$fontsize-name:  calc($baseunit * 2);
+$fontsize-title: calc($baseunit * 3);
+
+//#endregion SIZES
+

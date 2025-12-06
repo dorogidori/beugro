@@ -1,0 +1,22 @@
+@use 'variables';
+
+@mixin text_with_shadow($size: variables.$fontsize-name)  {
+    color: white;
+    font-size: $size;
+    font-weight: 500;
+
+    $shadowsize-r: calc($size * 0.06);
+    $shadowsize-l: calc($size * -0.06);
+    $shadowblur: calc($size * 0.1);
+
+    text-shadow: 
+        $shadowsize-r $shadowsize-r $shadowblur variables.$color-red,
+        $shadowsize-l $shadowsize-r $shadowblur variables.$color-red,
+        $shadowsize-r $shadowsize-l $shadowblur variables.$color-red,
+        $shadowsize-l $shadowsize-l $shadowblur variables.$color-red;
+    
+}
+
+@mixin boxShadow($left: 0, $down: 0.5, $blur: 4, $spread: 0.3, $color: variables.$shadow-color) {
+    box-shadow: calc(variables.$baseunit * $left) calc(variables.$baseunit * $down) calc(variables.$baseunit * $blur) calc(variables.$baseunit * $spread) $color;
+}

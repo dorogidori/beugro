@@ -1,0 +1,232 @@
+{
+    "situations": [
+        {
+            "id": 1,
+            "description": "Ketten hajtanak rá az éppen bezáró boltban az utolsó üveg pezsgőre.",
+            "roles": ["vevő1", "vevő2"],
+            "keywords": ["bolt", "vásárlás", "vita", "vagy-vagy"],
+            "variations": [
+                {
+                    "game": "Kétlövetű",
+                    "description": "Az eladó már zárna, ezért próbálja siettetni a vevőket.",
+                    "extraroles": ["eladó"],
+                    "data:": {
+                        "vevő1": [
+                            "Ma este ünneplünk!",
+                            "Kártyázunk?"
+                        ],
+                        "vevő2": [
+                            "Nekem csak ezt bírja a gyomrom!",
+                            "6-ra haza kell érnem, mert kezdődik a sorozatom."
+                        ]
+                    }
+                },
+                {
+                    "game": "1-2-3-4",
+                    "description": "Az eladó már zárna, ezért próbálja siettetni a vevőket. A mellettük nézelődő borász megragadja az alkalmat és megpróbálja rábeszélni őket, hogy a pezsgő helyett inkább az ő borát vegyék meg.",
+                    "extraroles": ["eladó", "borász"],
+                    "data:": {}
+                },
+                {
+                    "game": "Befutó",
+                    "description": "Az eladó már zárna, ezért próbálja siettetni a vevőket. A mellettük nézelődő borász megragadja az alkalmat és megpróbálja rábeszélni őket, hogy a pezsgő helyett inkább az ő borát vegyék meg.",
+                    "extraroles": ["eladó", "borász"],
+                    "data:": {
+                        "mainrole": "eladó",
+                        "words": ["bor", "pezsgő", "pénz"],
+                        "actions": []
+                    }
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "description": "Egy nő és egy férfi nem tudják eldönteni, hogy a romantikus vígjátékot, vagy az akciófilmet nézzék a moziban. A pénztárnál vitatkoznak.",
+            "roles": ["nő", "férfi"],
+            "keywords": ["mozi", "vita", "vagy-vagy"],
+            "variations": [
+                {
+                    "game": "Kétlövetű",
+                    "description": "A pénztáros próbálja siettetni a döntést, mert a film 5 perc múlva kezdődik.",
+                    "extraroles": ["pénztáros"],
+                    "data:": {
+                        "nő": [
+                            "Otthon is mindig ez van.",
+                            "Majdnem kiömlött a popcorn!"
+                        ],
+                        "férfi": [
+                            "A nők mindig az ellenkezőjét gondolják, mint amit mondanak.",
+                            "Verekedést akarok!"
+                        ]
+                    }
+                },
+                {
+                    "game": "1-2-3-4",
+                    "description": "A pénztáros próbálja siettetni a döntést, mert a film 5 perc múlva kezdődik. A sorban mögöttük álló földrajztanár az új természetfilmről áradozik (amit ő már látott) és meg akarja győzni a párt, hogy kompromisszumként inkább azt nézzék meg.",
+                    "roles": ["pénztáros", "földrajztanár"],
+                    "data:": {}
+                },
+                {
+                    "game": "Befutó",
+                    "description": "A pénztáros próbálja siettetni a döntést, mert a film 5 perc múlva kezdődik. A sorban mögöttük álló földrajztanár az új természetfilmről áradozik (amit ő már látott) és meg akarja győzni a párt, hogy kompromisszumként inkább azt nézzék meg.",
+                    "roles": ["pénztáros", "földrajztanár"],
+                    "data:": {
+                        "mainrole": "pénztáros",
+                        "words": ["jegy", "popcorn", "nyugalom"],
+                        "actions": []
+                    }
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "description": "Két rab egy cellába kerül és azon vitatkoznak, hogy kié legyen az alsó és a felső ágy.",
+            "roles": ["rab1", "rab2"],
+            "keywords": ["börtön", "vita", "vagy-vagy"],
+            "variations": [
+                {
+                    "game": "Kétlövetű",
+                    "description": "A börtönőr már zárná a cellát, ezért próbálja siettetni a döntést.",
+                    "extraroles": ["börtönőr"],
+                    "data:": {
+                        "rab1": [
+                            "Tériszonyos vagyok.",
+                            "Ecc, pecc, kimehetsz..."
+                        ],
+                        "rab2": [
+                            "Hiányzik anyukám!",
+                            "Stip-stop, én választok!"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "description": "Anyuka gyermeke mellé bébiszittert keres.",
+            "roles": ["anyuka", "bébiszitterjelölt"],
+            "keywords": ["anya", "bébiszitter", "állásinterjú"],
+            "variations": [
+                {
+                    "game": "1-2-3-4",
+                    "description": "A két jelölt megpróbálja meggyőzni az anyukát (és a gyereket), hogy miért ő a legalkalmasabb a pozícióra. A gyerek nem szeretne bébiszittert, ráadásul neveletlen is, így végül az anyukának is győzködnia kell a jelölteket.",
+                    "extraroles": ["bébiszitterjelölt2", "gyerek"],
+                    "data:": {}
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "description": "Egy bliccelőt elkap az ellenőr.",
+            "roles": ["bliccelő", "ellenőr"],
+            "keywords": ["tömegközlekedés", "ellenőr", "szabálytalan"],
+            "variations": []
+        },
+        
+        {
+            "id": 6,
+            "description": "Égő ház előtt álló tűzoltó biztatja a rettegő lakót, hogy nyugodtan ugorjon ki, elkapják.",
+            "roles": ["tűzoltó", "lakó"],
+            "keywords": ["tűz", "stresszhelyzet", "döntés"],
+            "variations": [
+                {
+                    "game": "Kétlövetű",
+                    "description": "A másik tűzoltó inkább kosaras emelőt hívna, nem bízik abban, hogy el tudják kapni.",
+                    "extraroles": ["tűzoltó2"],
+                    "data:": {
+                        "tűzoltó1": [
+                            "Gyorsan vége lesz.",
+                            "Inkább fizetek, csak haladjunk!"
+                        ],
+                        "tűzoltó2": [
+                            "Múlt héten kihagytam a karnapot.",
+                            "Nem vállalok felelősséget!"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "description": "Kezdő teniszező feleséget tenyeres ütésre oktat jól teniszező férje.",
+            "roles": ["feleség", "férj"],
+            "keywords": ["tenisz", "sport", "oktatás"],
+            "variations": [
+                {
+                    "game": "Kétlövetű",
+                    "description": "Ezt messziről meglátja egy profi edző és beleszól. Kritizálja a férj módszereit és a feleség technikáját is kijavítja.",
+                    "extraroles": ["edző"],
+                    "data:": {
+                        "feleség": [
+                            "Ez olyan, mint a serpenyő.",
+                            "Baj, ha eltalálom?"
+                        ],
+                        "edző": [
+                            "Ezt nem így kell!",
+                            "Maga reménytelen eset!"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "description": "Egy potyautas próbálja meggyőzni a hajóskapitányt, hogy ne dobják ki a hajóból.",
+            "roles": ["kapitány", "potyautas"],
+            "keywords": ["hajó", "meggyőzés"],
+            "variations": [
+                {
+                    "game": "Kétlövetű",
+                    "description": "A mellette ülő utas beleszól és kéri a kapitányt, hogy ne dobja ki. Ekkor a kapitány azt javasolja, hogy akkor őt dobja ki helyette.",
+                    "extraroles": ["utas2"],
+                    "data:": {
+                        "potyautas": [
+                            "Egy csónakban evezünk!",
+                            "Ha kikötünk, leszállok!"
+                        ],
+                        "utas2": [
+                            "Szerintem ez nem jó ötlet.",
+                            "Vajon tudok úszni?"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "description": "A férj egy gyönyörű leguánnal érkezik haza, amit meg akar tartani háziállatnak. A feleség nem akarja megtartani.",
+            "roles": ["férj", "feleség"],
+            "keywords": ["állat", "meggyőzés"],
+            "variations": [
+                {
+                    "game": "1-2-3-4",
+                    "description": "A vita közben hazaér a két gyerekük. Az egyik megtartaná, mert évek óta szeretne háziállatot. A másik gyerek rá sem mer nézni, mert fél tőle.",
+                    "extraroles": ["gyerek1", "gyerek2"],
+                    "data:": {}
+                },
+                {
+                    "game": "Befutó",
+                    "description": "A vita közben hazaér a két gyerekük. Az egyik megtartaná, mert évek óta szeretne háziállatot. A másik gyerek rá sem mer nézni, mert fél tőle.",
+                    "extraroles": ["gyerek1", "gyerek2"],
+                    "data:": {
+                        "mainrole": "férj"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "description": "",
+            "roles": [],
+            "keywords": [],
+            "variations": [
+                {
+                    "game": "",
+                    "description": "",
+                    "extraroles": [],
+                    "data:": {}
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+#gamecardssection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gamecard {
+    height: calc(variables.$baseunit * 15);
+
+    .gamecard-content {
+        text-align: left;
+    }
+
+    .gamecard-description-container {
+        display: flex;
+        align-items: center;
+        height: calc(variables.$baseunit * 9);
+    }
+}
+
+.randomcard {
+    background-color: rgba(variables.$color-lightblue, 0.6);
+    h2 {text-shadow: none; }
+}
+
+#dialog {
+    position: fixed;
+    top: 30%;
+    width: calc(variables.$baseunit * 18);
+    height: calc(variables.$baseunit * 10);
+    background-color: variables.$color-blue;
+    margin: auto;
+
+    #dialogbuttonsdiv {
+        display: flex;
+        justify-content: space-around;
+        margin-top: calc(variables.$baseunit * 1.5);
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .gamecard {
+        width: 41%;
+        margin: 0 calc(variables.$baseunit * 2) calc(variables.$baseunit * 2) calc(variables.$baseunit * 2);
+    }
+}

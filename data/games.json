@@ -1,0 +1,49 @@
+{
+    "games": [
+        {
+            "id": "zsebszoveg",
+            "name": "Zsebszöveg",
+            "description": "A játékosoknak a telefonjuk képernyőjén megjelenő mondatot azonnal be kell illeszteniük az aktuális szituációba."
+        },
+        {
+            "id": "valtolaz",
+            "name": "Váltóláz",
+            "description": "A játékosoknak a telefonjuk képernyőjén megjelenő érzelmet/tulajdonságot megvalósítva kell folytatniuk az aktuális szituációt."
+        },
+        {
+            "id": "1-2-3-4",
+            "name": "1-2-3-4",
+            "description": "A játékosok a szituáció során csak a kapott számú szóból álló mondatottal kommunikálhatnak."
+        },
+        {
+            "id": "ketlovetu",
+            "name": "Kétlövetű",
+            "description": "A szituáció bizonyos szereplői csak két-két, előre meghatározott mondattal kommunikálhatnak."
+        },
+        {
+            "id": "bekerdezo",
+            "name": "Bekérdező",
+            "description": "A játékosok csak kérdéssel kommunikálhatnak az aktuális szituációban."
+        },
+        {
+            "id": "befuto",
+            "name": "Befutó",
+            "description": "Egy játékos a szituációba csöppenve próbálja kitalálni társai furcsa viselkedésének okait."
+        },
+        {
+            "id": "ordogesangyal",
+            "name": "Ördög és angyal",
+            "description": "A két játékos a morális dilemma két ellentétes megoldásáról próbálják meggyőzni társaikat."
+        },
+        {
+            "id": "segitokez",
+            "name": "Segítő kéz",
+            "description": "Az egyik játékos a társa mögött állva a kezével elmutogat egy szituációt, amelyet elől álló társa megpróbál narrálni a szituáció ismerete nélkül."
+        },
+        {
+            "id": "stopptrukk",
+            "name": "Stopptrükk",
+            "description": "Néhány játékos elkezd egy jelenetet, majd egy ponton egy másik játékos megállítja azt és az egyik játékos helyére beállva elindít egy másik, az előzőtől eltérő szituációt."
+        }
+    ]
+}
