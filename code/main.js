@@ -1,7 +1,7 @@
 //#region ---------- Read from JSON ----------
 async function readFromJSON(filename) {
     try {
-        const filepath = `/data/${filename}.json`;
+        const filepath = `../data/${filename}.json`;      
         const response = await fetch(filepath);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
