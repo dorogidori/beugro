@@ -1,3 +1,5 @@
+import { getAllGames, createHTMLTag, generateRandomNumber, setItemInStorage } from './main.js';
+
 document.addEventListener('DOMContentLoaded', async () => { 
     await displayGameCards(true);
     setItemInStorage("game", null);

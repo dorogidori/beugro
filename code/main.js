@@ -1,8 +1,11 @@
 //#region ---------- Read from JSON ----------
 async function readFromJSON(filename) {
     try {
-        const filepath = `./data/${filename}.json`;      
-        const response = await fetch(filepath);
+        // const filepath = `data/${filename}.json`;
+        // const url = new URL(filepath, import.meta.url);
+        const base = new URL('../data/', import.meta.url);
+        const url = new URL(`${filename}.json`, base);      
+        const response = await fetch(url);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -13,27 +16,27 @@ async function readFromJSON(filename) {
     }
 }
 
-async function getAllGames() {
+export async function getAllGames() {
     const games = await readFromJSON("games");
     return games.games;
 }
 
-async function getAllSituations() {
+export async function getAllSituations() {
     const situations = await readFromJSON("situations");
     return situations.situations;
 }
 
-async function getAllSentences() {
+export async function getAllSentences() {
     const items = await readFromJSON("items");
     return items.sentences;
 }
 
-async function getAllEmotions() {
+export async function getAllEmotions() {
     const items = await readFromJSON("items");
     return items.emotions;
 }
 
-async function getAllEvents() {
+export async function getAllEvents() {
     const items = await readFromJSON("items");
     return items.events;
 }
@@ -41,25 +44,25 @@ async function getAllEvents() {
 //#endregion Read from JSON
 
 //#region ---------- Storage Modification ----------
-function setItemInStorage(item, value) {
+export function setItemInStorage(item, value) {
     let valuestr = JSON.stringify(value);
     sessionStorage.setItem(item, valuestr);
 }
 
-function getItemFromStorage(item) {
+export function getItemFromStorage(item) {
     let result = sessionStorage.getItem(item);
     result = JSON.parse(result);
     return result;
 }
 
-function removeGame() {
+export function removeGame() {
     setItemInStorage("game", null);
 }
 
 //#endregion Storage Modification
 
 //#region ---------- Helpers ----------
-function createHTMLTag(type, id, classes) {
+export function createHTMLTag(type, id, classes) {
     const tag = document.createElement(type);
     if(id != null) {
         tag.id = id;
@@ -72,7 +75,7 @@ function createHTMLTag(type, id, classes) {
     return tag;
 }
 
-function generateRandomNumber(max) {
+export function generateRandomNumber(max) {
     return Math.floor(Math.random() * max);
 }
 

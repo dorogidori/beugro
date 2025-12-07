@@ -1,3 +1,5 @@
+import {getItemFromStorage, setItemInStorage} from './main.js';
+
 document.addEventListener('DOMContentLoaded', async () => { 
     getDataFromStorage();
 });

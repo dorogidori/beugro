@@ -1,3 +1,5 @@
+import {getAllSituations, getItemFromStorage, setItemInStorage, createHTMLTag} from './main.js';
+
 document.addEventListener('DOMContentLoaded', async () => { 
     let situations = await getAllSituations();
     displaySituations(situations);
