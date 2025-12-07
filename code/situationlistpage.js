@@ -28,7 +28,7 @@ function displaySituations(allsituations) {
             console.log(situation);
             setItemInStorage("game", game);
             setItemInStorage("situation", situation);
-            const url = new URL('./situation.html', import.meta.url);
+            const url = new URL('../pages/situation.html', import.meta.url);
             window.location = url;
         });
 
@@ -118,7 +118,7 @@ function refreshSituation(situation, game) {
         console.log(situation);
         setItemInStorage("game", game);
         setItemInStorage("situation", situation);
-        const url = new URL('./situation.html', import.meta.url);
+        const url = new URL('../pages/situation.html', import.meta.url);
         window.location = url;
     });
 
