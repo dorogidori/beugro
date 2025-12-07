@@ -34,7 +34,8 @@ function displayGameCard(game) {
     const card = createHTMLTag("div", null, ["card", "gamecard"]);
     const link = createHTMLTag("a", null, []);
     if(game.name != "Random játék") {
-        link.href = "/pages/situations.html";
+        const url = new URL('../pages/situations.html', import.meta.url);
+        link.href = url;
     }
     const cardcontent = createHTMLTag("div", null, ["cardcontent", "gamecard-content"]);
 
@@ -92,7 +93,8 @@ function showRandomDialog(games) {
     playbutton.addEventListener("click", () => {
         setItemInStorage("game", games[num].name);
         dialog.close();
-        window.location = "../pages/situations.html";
+        const url = new URL('../pages/situations.html', import.meta.url);
+        window.location = url;
     });
 
     buttonsdiv.appendChild(backbutton);

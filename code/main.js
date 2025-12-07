@@ -1,8 +1,6 @@
 //#region ---------- Read from JSON ----------
 async function readFromJSON(filename) {
     try {
-        // const filepath = `data/${filename}.json`;
-        // const url = new URL(filepath, import.meta.url);
         const base = new URL('../data/', import.meta.url);
         const url = new URL(`${filename}.json`, base);      
         const response = await fetch(url);
