@@ -1,0 +1,7 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+#bellimg {
+    width: 88%;
+    margin-left: calc(variables.$baseunit * 5.5);
+}

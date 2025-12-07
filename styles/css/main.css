@@ -172,6 +172,11 @@ button {
   font-size: 4vh;
 }
 
+#bellimg {
+  width: 88%;
+  margin-left: 11vh;
+}
+
 html {
   background-color: #12144f;
   color: white;

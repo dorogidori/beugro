@@ -3,7 +3,8 @@
 @use './components/card';
 @use './pages/gamepage';
 @use './pages/situationlistpage';
-@use './pages/random';
+@use './pages/randompage';
+@use './pages/gamemasterpage';
 
 html {
     background-color: variables.$color-blue;
