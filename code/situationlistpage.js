@@ -28,7 +28,8 @@ function displaySituations(allsituations) {
             console.log(situation);
             setItemInStorage("game", game);
             setItemInStorage("situation", situation);
-            window.location = "./situation.html";
+            const url = new URL('./situation.html', import.meta.url);
+            window.location = url;
         });
 
         topdiv.appendChild(playButton);
