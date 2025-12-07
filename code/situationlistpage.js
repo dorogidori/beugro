@@ -111,7 +111,17 @@ function refreshSituation(situation, game) {
     variationlabel.textContent = game ? game : "Alap szituáció";
     topdiv.appendChild(variationlabel);
 
-    const playButton = displayPlayOptions(situation, null);
+    const playButton = createHTMLTag("button", null, ["cardbutton", "situationlistitem-play-button"])
+    playButton.textContent = "Kiválaszt";
+
+    playButton.addEventListener("click", () => {
+        console.log(situation);
+        setItemInStorage("game", game);
+        setItemInStorage("situation", situation);
+        const url = new URL('./situation.html', import.meta.url);
+        window.location = url;
+    });
+
     topdiv.appendChild(playButton);
 
     div.appendChild(topdiv);
