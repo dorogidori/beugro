@@ -56,6 +56,7 @@ export function getItemFromStorage(item) {
 export function removeGame() {
     setItemInStorage("game", null);
 }
+window.removeGame = removeGame;
 
 //#endregion Storage Modification
 
@@ -75,6 +76,24 @@ export function createHTMLTag(type, id, classes) {
 
 export function generateRandomNumber(max) {
     return Math.floor(Math.random() * max);
+}
+
+export function generateDifferentNumber(max, count = 5) {
+    let numbers = getItemFromStorage("numbers");
+    numbers = numbers ? numbers : [];
+
+    let n = generateRandomNumber(max);
+    while(numbers.includes(n)) {
+        n = generateRandomNumber(max);
+    }
+    
+    if(numbers.length >= count) {
+        numbers.shift();
+    }
+
+    numbers.push(n);
+    setItemInStorage("numbers", numbers);
+    return n;
 }
 
 //#endregion Helpers

@@ -150,6 +150,28 @@ button {
     margin-right: 1vh;
   }
 }
+#randommain {
+  margin: 0;
+  padding-top: 2vh;
+  max-width: 100%;
+}
+
+#backbutton {
+  margin-left: 2vh;
+}
+
+#randomsection {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#randomtext {
+  margin: 4vh;
+  font-size: 4vh;
+}
+
 html {
   background-color: #12144f;
   color: white;
