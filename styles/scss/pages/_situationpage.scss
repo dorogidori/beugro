@@ -1,0 +1,179 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+section {
+    article {
+        margin-left: calc(variables.$baseunit * 1.5);
+    }
+}
+
+#playbutton {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-right: calc(variables.$baseunit * 2);
+    margin-bottom: calc(variables.$baseunit * 2);
+    font-size: variables.$fontsize-large;
+    padding: calc(variables.$fontsize-large * 0.5) variables.$fontsize-large;
+}
+
+#main {
+    margin-bottom: calc(variables.$baseunit * 6);
+}
+
+//#region ---------- GAME ----------
+#gamenamediv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+        margin: 0;
+    }
+}
+
+#gamename {
+    @include mixins.text_with_shadow;
+    text-align: center;
+    margin: 0;
+}
+
+#placeholdername {
+    visibility: hidden;
+}
+
+//#endregion GAME
+
+//#region ---------- Situation - common ----------
+.gridtable {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: variables.$fontsize-normal;
+    width: fit-content;
+}
+
+.playerrolecell {
+    grid-column: 1;
+    padding-top: calc(variables.$fontsize-normal * 0.3);
+    text-align: right;
+}
+
+.playernamecell {
+    grid-column: 2;
+}
+
+.playernameinput {
+    padding: calc(variables.$fontsize-normal * 0.2) calc(variables.$fontsize-normal * 0.5);
+    background-color: variables.$shadow-color;
+    color: variables.$color-lightblue;
+    opacity: 0.5;
+    outline: none;
+    font-size: variables.$fontsize-normal;
+    border: calc(variables.$fontsize-normal * 0.2) solid variables.$color-lightblue;
+    transition: 0.5s;
+
+    &::placeholder {
+        color: variables.$color-lightblue;
+    }
+
+    &:focus {
+        opacity: 1;
+    }
+}
+
+.specialrolecell,
+.wordnumrolecell {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 0;
+
+    .playerroletext {
+        margin: 0;
+        text-align: right;
+    }
+}
+
+//#endregion SITUATION - common
+
+//#region ------ Kétlövetű ------
+.sentencescell {
+    grid-column: 2;
+}
+
+.sentencediv {
+    padding: 0 0 calc(variables.$fontsize-small * 0.5) calc(variables.$fontsize-small * 0.5);
+    width: fit-content;
+}
+
+.buttonsdiv {
+    float: right;
+    margin-left: variables.$fontsize-normal;
+}
+
+//#endregion Kétlövetű
+
+//#region ------ 1-2-3-4 ------
+#container1234 {
+    display: flex;
+    align-items: center;
+}
+
+.wordnumcell {
+    grid-column: 2;
+    color: variables.$color-lightblue;
+    background-color: variables.$shadow-color;
+    border: calc(variables.$fontsize-normal * 0.2) solid variables.$color-lightblue;
+    padding: calc(variables.$fontsize-normal * 0.2) calc(variables.$fontsize-normal * 0.5);
+    text-align: center;
+    font-weight: 600;
+}
+
+#shufflebutton {
+    font-size: variables.$fontsize-normal;
+    padding: variables.$fontsize-normal;
+    margin-left: calc(variables.$fontsize-normal * 3)
+}
+
+//#endregion 1-2-3-4
+
+@media screen and (min-width: 600px) {
+    #playbutton {
+        margin-right: 20%;
+        margin-bottom: calc(variables.$baseunit * 3);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section {
+        article {
+            margin-left: variables.$baseunit;
+        }
+    }
+
+    .gridtable {
+        gap: calc(variables.$fontsize-small * 0.5);
+    }
+
+    .specialrolecell {
+        justify-content: left;
+        font-weight: 700;
+    }
+
+    .wordnumrolecell {
+        margin-right: calc(variables.$fontsize-normal * 0.6);
+    }
+
+    .playernamecell,
+    .sentencescell {
+        grid-column: 1;
+    }
+
+    .playerrolecell {
+        text-align: left;
+    }
+
+    .playerroletext {
+        margin-bottom: 0;
+    }
+}

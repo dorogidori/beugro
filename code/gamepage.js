@@ -80,15 +80,15 @@ function showRandomDialog(games) {
     
     const buttonsdiv = createHTMLTag("div", "dialogbuttonsdiv", []);
 
-    const backbutton = createHTMLTag("button", "backbutton", ["cardbutton"]);
+    const backbutton = createHTMLTag("button", "backbutton", ["mainbutton"]);
     backbutton.textContent = "Mégse";
     backbutton.addEventListener("click", () => {dialog.close();});
 
-    const generatebutton = createHTMLTag("button", "generatebutton", ["cardbutton"]);
+    const generatebutton = createHTMLTag("button", "generatebutton", ["mainbutton"]);
     generatebutton.textContent = "Új sorsolás";
     generatebutton.addEventListener("click", () => {showRandomDialog(games);});
 
-    const playbutton = createHTMLTag("button", "playbutton", ["cardbutton"]);
+    const playbutton = createHTMLTag("button", "playbutton", ["mainbutton"]);
     playbutton.textContent = "Játék";
     playbutton.addEventListener("click", () => {
         setItemInStorage("game", games[num].name);

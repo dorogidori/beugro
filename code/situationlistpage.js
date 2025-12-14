@@ -21,7 +21,7 @@ function displaySituations(allsituations) {
         variationlabel.textContent = game ? game : "Alap szituáció";
         topdiv.appendChild(variationlabel);
         
-        const playButton = createHTMLTag("button", null, ["cardbutton", "situationlistitem-play-button"])
+        const playButton = createHTMLTag("button", null, ["mainbutton", "situationlistitem-play-button"])
         playButton.textContent = "Kiválaszt";
 
         playButton.addEventListener("click", () => {
@@ -68,7 +68,7 @@ function displayVariations(situation, selected) {
 
     variations.forEach((variation) => {
         if (variation.game != selected) {
-            const button = createHTMLTag("button", null, ["situationlistitem-variations-button"]);
+            const button = createHTMLTag("button", null, ["smallbutton"]);
             button.textContent = variation.game;
             button.addEventListener("click", () => {
                 const game = variation.game == "Alap szituáció" ? null : variation.game;
@@ -111,7 +111,7 @@ function refreshSituation(situation, game) {
     variationlabel.textContent = game ? game : "Alap szituáció";
     topdiv.appendChild(variationlabel);
 
-    const playButton = createHTMLTag("button", null, ["cardbutton", "situationlistitem-play-button"])
+    const playButton = createHTMLTag("button", null, ["mainbutton", "situationlistitem-play-button"])
     playButton.textContent = "Kiválaszt";
 
     playButton.addEventListener("click", () => {

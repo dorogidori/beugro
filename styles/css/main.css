@@ -27,7 +27,7 @@ button {
   text-align: center;
 }
 
-.cardbutton {
+.mainbutton {
   background-color: #e2014a;
   color: white;
   font-weight: 600;
@@ -35,8 +35,21 @@ button {
   padding: 0.7vh 1.4vh;
   border-radius: 2vh;
 }
-.cardbutton:hover {
+.mainbutton:hover {
   color: #12144f;
+}
+
+.smallbutton {
+  background-color: #6e70c6;
+  color: #12144f;
+  font-weight: 600;
+  padding: 0.28vh 0.7vh;
+  border-radius: 0.7vh;
+  margin-right: 0.7vh;
+}
+.smallbutton:hover {
+  background-color: #e2014a;
+  color: white;
 }
 
 #gamecardssection {
@@ -83,6 +96,164 @@ button {
     margin: 0 4vh 4vh 4vh;
   }
 }
+#bellimg {
+  width: 88%;
+  margin-left: 11vh;
+}
+
+section article {
+  margin-left: 3vh;
+}
+
+#playbutton {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-right: 4vh;
+  margin-bottom: 4vh;
+  font-size: 2.4vh;
+  padding: 1.2vh 2.4vh;
+}
+
+#main {
+  margin-bottom: 12vh;
+}
+
+#gamenamediv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#gamenamediv h2 {
+  margin: 0;
+}
+
+#gamename {
+  color: white;
+  font-size: 4vh;
+  font-weight: 500;
+  text-shadow: 0.24vh 0.24vh 0.4vh #e2014a, -0.24vh 0.24vh 0.4vh #e2014a, 0.24vh -0.24vh 0.4vh #e2014a, -0.24vh -0.24vh 0.4vh #e2014a;
+  text-align: center;
+  margin: 0;
+}
+
+#placeholdername {
+  visibility: hidden;
+}
+
+.gridtable {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2vh;
+  width: fit-content;
+}
+
+.playerrolecell {
+  grid-column: 1;
+  padding-top: 0.6vh;
+  text-align: right;
+}
+
+.playernamecell {
+  grid-column: 2;
+}
+
+.playernameinput {
+  padding: 0.4vh 1vh;
+  background-color: #202270;
+  color: #6e70c6;
+  opacity: 0.5;
+  outline: none;
+  font-size: 2vh;
+  border: 0.4vh solid #6e70c6;
+  transition: 0.5s;
+}
+.playernameinput::placeholder {
+  color: #6e70c6;
+}
+.playernameinput:focus {
+  opacity: 1;
+}
+
+.specialrolecell,
+.wordnumrolecell {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 0;
+}
+.specialrolecell .playerroletext,
+.wordnumrolecell .playerroletext {
+  margin: 0;
+  text-align: right;
+}
+
+.sentencescell {
+  grid-column: 2;
+}
+
+.sentencediv {
+  padding: 0 0 0.7vh 0.7vh;
+  width: fit-content;
+}
+
+.buttonsdiv {
+  float: right;
+  margin-left: 2vh;
+}
+
+#container1234 {
+  display: flex;
+  align-items: center;
+}
+
+.wordnumcell {
+  grid-column: 2;
+  color: #6e70c6;
+  background-color: #202270;
+  border: 0.4vh solid #6e70c6;
+  padding: 0.4vh 1vh;
+  text-align: center;
+  font-weight: 600;
+}
+
+#shufflebutton {
+  font-size: 2vh;
+  padding: 2vh;
+  margin-left: 6vh;
+}
+
+@media screen and (min-width: 600px) {
+  #playbutton {
+    margin-right: 20%;
+    margin-bottom: 6vh;
+  }
+}
+@media screen and (max-width: 600px) {
+  section article {
+    margin-left: 2vh;
+  }
+  .gridtable {
+    gap: 0.7vh;
+  }
+  .specialrolecell {
+    justify-content: left;
+    font-weight: 700;
+  }
+  .wordnumrolecell {
+    margin-right: 1.2vh;
+  }
+  .playernamecell,
+  .sentencescell {
+    grid-column: 1;
+  }
+  .playerrolecell {
+    text-align: left;
+  }
+  .playerroletext {
+    margin-bottom: 0;
+  }
+}
 .situationlistitem {
   padding: 2vh 2vh 3vh 3vh;
   text-align: left;
@@ -115,18 +286,6 @@ button {
 .situationlistitem-variations .situationlistitem-variations-text {
   font-weight: 200;
   margin-right: 1vh;
-}
-.situationlistitem-variations .situationlistitem-variations-button {
-  background-color: #6e70c6;
-  color: #12144f;
-  font-weight: 600;
-  padding: 0.28vh 0.7vh;
-  border-radius: 0.7vh;
-  margin-right: 0.7vh;
-}
-.situationlistitem-variations .situationlistitem-variations-button:hover {
-  background-color: #e2014a;
-  color: white;
 }
 
 .situationlistitem-keywords {
@@ -170,11 +329,6 @@ button {
 #randomtext {
   margin: 4vh;
   font-size: 4vh;
-}
-
-#bellimg {
-  width: 88%;
-  margin-left: 11vh;
 }
 
 html {
@@ -269,6 +423,10 @@ header #headerbottom a:hover:not([id=current]) {
 header #headerbottom a.current {
   text-decoration: underline;
   cursor: default;
+}
+
+h3 {
+  color: #e2014a;
 }
 
 @media screen and (min-width: 600px) {

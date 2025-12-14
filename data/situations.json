@@ -10,7 +10,7 @@
                     "game": "Kétlövetű",
                     "description": "Az eladó már zárna, ezért próbálja siettetni a vevőket.",
                     "extraroles": ["eladó"],
-                    "data:": {
+                    "data": {
                         "vevő1": [
                             "Ma este ünneplünk!",
                             "Kártyázunk?"
@@ -25,13 +25,13 @@
                     "game": "1-2-3-4",
                     "description": "Az eladó már zárna, ezért próbálja siettetni a vevőket. A mellettük nézelődő borász megragadja az alkalmat és megpróbálja rábeszélni őket, hogy a pezsgő helyett inkább az ő borát vegyék meg.",
                     "extraroles": ["eladó", "borász"],
-                    "data:": {}
+                    "data": {}
                 },
                 {
                     "game": "Befutó",
                     "description": "Az eladó már zárna, ezért próbálja siettetni a vevőket. A mellettük nézelődő borász megragadja az alkalmat és megpróbálja rábeszélni őket, hogy a pezsgő helyett inkább az ő borát vegyék meg.",
                     "extraroles": ["eladó", "borász"],
-                    "data:": {
+                    "data": {
                         "mainrole": "eladó",
                         "words": ["bor", "pezsgő", "pénz"],
                         "actions": []
@@ -49,7 +49,7 @@
                     "game": "Kétlövetű",
                     "description": "A pénztáros próbálja siettetni a döntést, mert a film 5 perc múlva kezdődik.",
                     "extraroles": ["pénztáros"],
-                    "data:": {
+                    "data": {
                         "nő": [
                             "Otthon is mindig ez van.",
                             "Majdnem kiömlött a popcorn!"
@@ -64,15 +64,15 @@
                     "game": "1-2-3-4",
                     "description": "A pénztáros próbálja siettetni a döntést, mert a film 5 perc múlva kezdődik. A sorban mögöttük álló földrajztanár az új természetfilmről áradozik (amit ő már látott) és meg akarja győzni a párt, hogy kompromisszumként inkább azt nézzék meg.",
                     "roles": ["pénztáros", "földrajztanár"],
-                    "data:": {}
+                    "data": {}
                 },
                 {
                     "game": "Befutó",
                     "description": "A pénztáros próbálja siettetni a döntést, mert a film 5 perc múlva kezdődik. A sorban mögöttük álló földrajztanár az új természetfilmről áradozik (amit ő már látott) és meg akarja győzni a párt, hogy kompromisszumként inkább azt nézzék meg.",
                     "roles": ["pénztáros", "földrajztanár"],
-                    "data:": {
+                    "data": {
                         "mainrole": "pénztáros",
-                        "words": ["jegy", "popcorn", "nyugalom"],
+                        "words": ["jegy", "popcorn", "film"],
                         "actions": []
                     }
                 }
@@ -88,7 +88,7 @@
                     "game": "Kétlövetű",
                     "description": "A börtönőr már zárná a cellát, ezért próbálja siettetni a döntést.",
                     "extraroles": ["börtönőr"],
-                    "data:": {
+                    "data": {
                         "rab1": [
                             "Tériszonyos vagyok.",
                             "Ecc, pecc, kimehetsz..."
@@ -111,7 +111,7 @@
                     "game": "1-2-3-4",
                     "description": "A két jelölt megpróbálja meggyőzni az anyukát (és a gyereket), hogy miért ő a legalkalmasabb a pozícióra. A gyerek nem szeretne bébiszittert, ráadásul neveletlen is, így végül az anyukának is győzködnia kell a jelölteket.",
                     "extraroles": ["bébiszitterjelölt2", "gyerek"],
-                    "data:": {}
+                    "data": {}
                 }
             ]
         },
@@ -133,7 +133,7 @@
                     "game": "Kétlövetű",
                     "description": "A másik tűzoltó inkább kosaras emelőt hívna, nem bízik abban, hogy el tudják kapni.",
                     "extraroles": ["tűzoltó2"],
-                    "data:": {
+                    "data": {
                         "tűzoltó1": [
                             "Gyorsan vége lesz.",
                             "Inkább fizetek, csak haladjunk!"
@@ -156,7 +156,7 @@
                     "game": "Kétlövetű",
                     "description": "Ezt messziről meglátja egy profi edző és beleszól. Kritizálja a férj módszereit és a feleség technikáját is kijavítja.",
                     "extraroles": ["edző"],
-                    "data:": {
+                    "data": {
                         "feleség": [
                             "Ez olyan, mint a serpenyő.",
                             "Baj, ha eltalálom?"
@@ -179,7 +179,7 @@
                     "game": "Kétlövetű",
                     "description": "A mellette ülő utas beleszól és kéri a kapitányt, hogy ne dobja ki. Ekkor a kapitány azt javasolja, hogy akkor őt dobja ki helyette.",
                     "extraroles": ["utas2"],
-                    "data:": {
+                    "data": {
                         "potyautas": [
                             "Egy csónakban evezünk!",
                             "Ha kikötünk, leszállok!"
@@ -202,13 +202,13 @@
                     "game": "1-2-3-4",
                     "description": "A vita közben hazaér a két gyerekük. Az egyik megtartaná, mert évek óta szeretne háziállatot. A másik gyerek rá sem mer nézni, mert fél tőle.",
                     "extraroles": ["gyerek1", "gyerek2"],
-                    "data:": {}
+                    "data": {}
                 },
                 {
                     "game": "Befutó",
                     "description": "A vita közben hazaér a két gyerekük. Az egyik megtartaná, mert évek óta szeretne háziállatot. A másik gyerek rá sem mer nézni, mert fél tőle.",
                     "extraroles": ["gyerek1", "gyerek2"],
-                    "data:": {
+                    "data": {
                         "mainrole": "férj"
                     }
                 }
@@ -224,7 +224,7 @@
                     "game": "",
                     "description": "",
                     "extraroles": [],
-                    "data:": {}
+                    "data": {}
                 }
             ]
         }

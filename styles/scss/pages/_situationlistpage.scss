@@ -35,19 +35,7 @@
         margin-right: calc(variables.$baseunit * 0.5);
     }
 
-    .situationlistitem-variations-button {
-        background-color: variables.$color-lightblue;
-        color: variables.$color-blue;
-        font-weight: 600;
-        padding: calc(variables.$fontsize-small * 0.2) calc(variables.$fontsize-small * 0.5);
-        border-radius: calc(variables.$fontsize-small * 0.5);
-        margin-right: calc(variables.$fontsize-small * 0.5);
-
-        &:hover {
-            background-color: variables.$color-red;
-            color: white;
-        }
-    }
+    
 }
 
 .situationlistitem-keywords {

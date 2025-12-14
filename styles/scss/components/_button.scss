@@ -1,0 +1,35 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+button {
+    border: none;
+    font-size: variables.$fontsize-small;
+    text-align: center;
+}
+
+.mainbutton {
+    background-color: variables.$color-red;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: calc(variables.$fontsize-small * 0.5) variables.$fontsize-small;
+    border-radius: variables.$baseunit;
+
+    &:hover {
+        color: variables.$color-blue;
+    }
+}
+
+.smallbutton {
+    background-color: variables.$color-lightblue;
+    color: variables.$color-blue;
+    font-weight: 600;
+    padding: calc(variables.$fontsize-small * 0.2) calc(variables.$fontsize-small * 0.5);
+    border-radius: calc(variables.$fontsize-small * 0.5);
+    margin-right: calc(variables.$fontsize-small * 0.5);
+
+    &:hover {
+        background-color: variables.$color-red;
+        color: white;
+    }
+}

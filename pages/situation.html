@@ -29,8 +29,29 @@
             <a href="../pages/situations.html" id="situationmenu" onclick="removeGame()"><div>Szituációk</div></a>
         </div>
     </header>
-    <main>
-        <section id="situationlistsection"></section>
+    <main id="main">
+        <section id="gamesection">
+            <div id="gamenamediv"><h2 id="nameh2">Játék</h2><div id="gamename" class="hideelement"></div><h2 id="placeholdername">Játék</h2></div>
+            <article id="gamedescriptionsection" class="hideelement"></article>
+            <article>
+                <h3>Választható játékok</h3>
+                <div id="situation-variations" class="situationlistitem-variations"></div>
+            </article>
+        </section>
+        <section id="situationsection">
+            <h2>Szituáció</h2>
+            <article>
+                <h3>Leírás</h3>
+                <p id="situation-description"></p>
+                <div id="situation-keywords" class="situationlistitem-keywords"></div>
+            </article>
+            <article>
+                <h3>Szereplők</h3>
+                <div id="situation-roles" class="rolestable gridtable"></div>
+            </article>
+            <article id="specificsection" class="hideelement"></article>
+        </section>
+        <button id="playbutton" class="mainbutton hideelement">Játék indítása</button>
     </main>
     
 </body>

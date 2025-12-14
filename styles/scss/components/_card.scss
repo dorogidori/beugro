@@ -20,22 +20,3 @@
     text-align: center;
     margin: 0;
 }
-
-button {
-    border: none;
-    font-size: variables.$fontsize-small;
-    text-align: center;
-}
-
-.cardbutton {
-    background-color: variables.$color-red;
-    color: white;
-    font-weight: 600;
-    text-transform: uppercase;
-    padding: calc(variables.$fontsize-small * 0.5) variables.$fontsize-small;
-    border-radius: variables.$baseunit;
-
-    &:hover {
-        color: variables.$color-blue;
-    }
-}

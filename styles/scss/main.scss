@@ -1,10 +1,12 @@
 @use './abstracts/variables';
 @use './abstracts/mixins';
 @use './components/card';
+@use './components/button';
 @use './pages/gamepage';
+@use './pages/gamemasterpage';
+@use './pages/situationpage';
 @use './pages/situationlistpage';
 @use './pages/randompage';
-@use './pages/gamemasterpage';
 
 html {
     background-color: variables.$color-blue;
@@ -100,6 +102,10 @@ header {
             }
         }
     }
+}
+
+h3 {
+    color: variables.$color-red;
 }
 
 @media screen and (min-width: 600px) {
